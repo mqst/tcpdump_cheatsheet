@@ -6,3 +6,6 @@ tcpdump -i wlan0 -A port http | egrep -i ‘pass=|pwd=|log=|login=|user=|usernam
 
 ##Capture credentials on all protocols
 tcpdump -i wlan0 -A port port http or port ftp or port smtp or port imap or port pop3 | egrep -i ‘pass=|pwd=|log=|login=|user=|username=|pw=|passw=|passwd=|password=|pass:|user:|username:|password:|login:|pass |user | uname= ‘
+
+##See what traffic is hitting you
+tcpdump -i wlan0 -n  | head
