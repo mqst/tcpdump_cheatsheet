@@ -9,3 +9,8 @@ tcpdump -i wlan0 -A port port http or port ftp or port smtp or port imap or port
 
 ##See what traffic is hitting you
 tcpdump -i wlan0 -n  | head
+
+##Find all HOST headers
+tcpdump -s0 -vv | grep "Host:"
+
+##
