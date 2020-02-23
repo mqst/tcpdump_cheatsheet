@@ -13,4 +13,5 @@ tcpdump -i wlan0 -n  | head
 ##Find all HOST headers
 tcpdump -s0 -vv | grep "Host:"
 
-##
+##Find cookies in all HTTP requests which are being captured
+tcpdump -s0 -vv | grep "[Set-Cookie| Host: | Cookie:]"
